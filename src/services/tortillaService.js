@@ -12,6 +12,12 @@ class TortillaService {
       .then(({data}) => data)
   }
 
+  getThis(id) {
+    console.log(id);
+    return this.api.get(`/${id}`)
+    .then(({data})=> data)
+  }
+
   createTortilla(body) {
     return this.api.post('/', body)
       .then(({data}) => data)
@@ -20,6 +26,11 @@ class TortillaService {
   deleteTortilla(id) {
     return this.api.delete(`/${id}`)
       .then(({data}) => data)
+  }
+
+  editTortilla(id, body) {
+    return this.api.put(`/${id}`,body)
+    .then (({data})=> data)
   }
 
 }

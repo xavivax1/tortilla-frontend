@@ -22,6 +22,9 @@ class ListTortillas extends Component {
       .catch(err => console.log(err));
   }
 
+  handleUpdate = (id ) => {
+    
+  }
   handleDelete = (id) => {
     tortillaService.deleteTortilla(id)
       .then(result => {
@@ -41,6 +44,7 @@ class ListTortillas extends Component {
               key={tortilla._id}
               data={tortilla}
               onDelete={this.handleDelete}
+              onUpdate={this.handelUpdate}
             />
           ))}
         </ul>

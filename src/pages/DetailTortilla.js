@@ -4,7 +4,8 @@ class DetailTortilla extends Component {
   render() {
     return (
       <div>
-        Details
+       <button >Detail</button>
+        <button >Delete</button>
       </div>
     );
   }
